@@ -7,6 +7,17 @@
 </head>
 <body>
     <h1 style ="color:blue">New looks</h1>
-    <p>My site has changed a little bit.</p>
+    <p>My site has changed a little bit</p>
+    
+    <p>
+        {% for post in posts%}
+            <article>
+                <time>published: {{post.published_date}}</time>
+                <h2><a href = "">{{post.title}}</a></h2>
+                <p>{{post.text|linebreaksbr}}</p>
+            </article>   
+        {% endfor %}
+    </p>
+
 </body>
 </html>
